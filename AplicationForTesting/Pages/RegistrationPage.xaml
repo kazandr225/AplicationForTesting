@@ -9,6 +9,19 @@
       Title="RegistrationPage">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical" Width="255" Height="220" >
+
+            <TextBox Name="tbSurname" Width="255" Height="20" Margin="0,5,0,5" Text="Фамилия" TextAlignment="Center" GotFocus="TexBox_GotFocus"></TextBox>
+            <TextBox Name="tbName" Width="255" Height="20" Margin="0,5,0,5" Text="Имя" TextAlignment="Center" GotFocus="TexBox_GotFocus"></TextBox>
+            <TextBox Name="tbPatronymic" Width="255" Height="20" Margin="0,5,0,5" Text="Отчество" TextAlignment="Center" GotFocus="TexBox_GotFocus"></TextBox>
+
+            <TextBox Name="tbLogin" Width="255" Height="20" Margin="0,5,0,5" Text="Логин" TextAlignment="Center" GotFocus="TexBox_GotFocus"></TextBox>
+            <TextBox Name="tbPassword" Width="255" Height="20"  Margin="0,5,0,0" Text="Пароль" TextAlignment="Center" GotFocus="TexBox_GotFocus"></TextBox>
+
+            <Button Name="btnRegistranion" Click="btnRegistranion_Click" Height="25" Margin="0,5,0,0">Зарегистрироваться</Button>
+            <Button Name="btnBack" Click="btnBack_Click" Height="25" Margin="0,5,0,0">Назад</Button>
+        </StackPanel>
     </Grid>
+
+
 </Page>
