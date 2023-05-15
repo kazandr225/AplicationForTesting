@@ -47,11 +47,42 @@ namespace AplicationForTesting.Pages
             if (rb7B.IsChecked == true) res1++;
             if (rb8V.IsChecked == true) res1++;
             if (rb93.IsChecked == true) res1++;
+            if (rb106.IsChecked == true) res1++;
 
-            GlobalClass gl = new GlobalClass();
-            gl.res += res1;
+            if (cb111.IsChecked == true) res1--;
+            if (cb112.IsChecked == true) res1++;
+            if (cb113.IsChecked == true) res1++;
+            if (cb114.IsChecked == true) res1++;
+            if (cb115.IsChecked == true) res1--;
+            if (cb116.IsChecked == true) res1--;
+
+
+            if (cb121.IsChecked == true) res1--;
+            if (cb122.IsChecked == true) res1++;
+            if (cb123.IsChecked == true) res1++;
+            if (cb124.IsChecked == true) res1++;
+            if (cb125.IsChecked == true) res1++;
+
+            if (cb131.IsChecked == true) res1++;
+            if (cb132.IsChecked == true) res1--;
+            if (cb133.IsChecked == true) res1--;
+            if (cb134.IsChecked == true) res1--;
+            if (cb135.IsChecked == true) res1++;
+
+            if (cb141.IsChecked == true) res1++;
+            if (cb142.IsChecked == true) res1--;
+            if (cb143.IsChecked == true) res1--;
+            if (cb144.IsChecked == true) res1++;
+            if (cb145.IsChecked == true) res1--;
+
+            GlobalClass.res += res1;
 
             FrameClass.MainFrame.Navigate(new ResoultsPage());
+        }
+
+        private void cb_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

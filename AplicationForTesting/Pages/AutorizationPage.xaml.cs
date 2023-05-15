@@ -64,8 +64,7 @@ namespace AplicationForTesting.Pages
                         break;
                 }
 
-                GlobalClass gl = new GlobalClass();
-                gl.id = r;
+                GlobalClass.id = r;
             }
         }
 

@@ -23,23 +23,14 @@ namespace AplicationForTesting.Pages
     {
         public int idUs;
         public int Score;
-        public int Result;
+        public int Results;
+
         public ResoultsPage()
         {
             InitializeComponent();
-            //Users users;
-            //idUs = users.UserId;
-            //GlobalClass gl = new GlobalClass();
-            //Score += gl.res;
-        }
 
-        public ResoultsPage(Users users) // конструктор для студента
-        {
-            InitializeComponent();
-
-            //GlobalClass gl = new GlobalClass();
-            //Score += gl.res;
-            //idUs = gl.id;
+            Score += GlobalClass.res;
+            idUs = GlobalClass.id;
         }
 
         /// <summary>
@@ -47,52 +38,62 @@ namespace AplicationForTesting.Pages
         /// </summary>
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            //GlobalClass gl = new GlobalClass();
-            //
 
-            //try
-            //{
-            //    StudentsResulst studentsResulst = new StudentsResulst();
-            //    {
-            //        UserId = idUs,
-            //        Scores = Convert.ToInt32(Score),
-            //        Result = Convert.ToInt32(Result)
-            //    };
+            try
+            {
 
-            //    BaseClass.EM.StudentsResulst.Add(studentsResulst);
-            //    BaseClass.EM.SaveChanges();
-            //    MessageBox.Show("Данные усепшно добавлены");
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Возникла ошибка");
-            //}
+                //объект для записи в БД
+                StudentsResulst studentsResulst = new StudentsResulst()
+                {
+                    UserId = idUs,
+                    Scores = Score,
+                    Result = Results
+                };
+
+                Role role = new Role();
+                { 
+                    
+                }
+
+                BaseClass.EM.StudentsResulst.Add(studentsResulst);
+                BaseClass.EM.SaveChanges();
+                MessageBox.Show("Данные усепшно добавлены");
+            }
+            catch
+            {
+                MessageBox.Show("Возникла ошибка");
+            }
 
         }
 
         private void tblScore_Loaded(object sender, RoutedEventArgs e)
         {
             TextBlock tb = (TextBlock)sender;
-            //int index = Convert.ToInt32(tb.Uid);
 
             if (65 <= Score && Score <= 71) //вычисляем оценку
             {
-                Result = 5;
+                Results = 5;
             }
             else if (55 <= Score && Score <= 64)
             {
-                Result = 4;
+                Results = 4;
             }
             if (46 <= Score && Score <= 54)
             {
-                Result = 3;
+                Results = 3;
             }
             else if (Score <= 45)
             {
-                Result = 2;
+                Results = 2;
             }
 
-            tb.Text = "Ваша оценка: " + Result;
+            tb.Text = "Ваша оценка: " + Results;
+        }
+
+        private void tblScoreCount_Loaded(object sender, RoutedEventArgs e)
+        {
+            TextBlock tb = (TextBlock)sender;
+            tb.Text = "Количество набранных баллов: " + Score;
         }
     }
 }

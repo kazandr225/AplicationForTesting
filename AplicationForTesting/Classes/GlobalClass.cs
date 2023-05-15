@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AplicationForTesting.Classes
 {
-    public class GlobalClass
+    public static class GlobalClass
     {
-        public  int id;
-        public  int res;
+        public static int id;
+        public static int res;
     }
 }
