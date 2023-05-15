@@ -25,8 +25,10 @@ namespace AplicationForTesting
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Resurce> Resurce { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<StudentsResulst> StudentsResulst { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

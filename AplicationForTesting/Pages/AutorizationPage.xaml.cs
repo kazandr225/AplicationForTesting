@@ -21,6 +21,7 @@ namespace AplicationForTesting.Pages
     /// </summary>
     public partial class AutorizationPage : Page
     {
+        public int r;
         public AutorizationPage()
         {
             InitializeComponent();
@@ -31,6 +32,9 @@ namespace AplicationForTesting.Pages
         /// </summary>
         private void btnAutorization_Click(object sender, RoutedEventArgs e)
         {
+            
+            
+
             if (tbLogin.Text == "" || tbLogin.Text == " " && tbPassword.Text == "" || tbPassword.Text == " ") //проверка на нулевое значение
             {
                 MessageBox.Show("Ошибка ввода");
@@ -46,17 +50,22 @@ namespace AplicationForTesting.Pages
             if (users != null)
             {
 
-                switch (users.RoleID) //проверка на роль, если пользоваетль найден
+                switch (users.RoleId) //проверка на роль, если пользоваетль найден
                 {
                     case 1: //Студент
                         MessageBox.Show("Добро пожаловать!");
+                        r = 1;
                         FrameClass.MainFrame.Navigate(new PracticPage1(users));
                         break;
                     case 2: //Преподаватель
                         MessageBox.Show("Добро пожаловать!");
-                        FrameClass.MainFrame.Navigate(new ResoultsPage(users));
+                        r = 2;
+                        FrameClass.MainFrame.Navigate(new RatingPage(users));
                         break;
                 }
+
+                GlobalClass gl = new GlobalClass();
+                gl.id = r;
             }
         }
 

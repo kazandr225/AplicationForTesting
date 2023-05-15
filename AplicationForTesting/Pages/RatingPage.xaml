@@ -1,0 +1,119 @@
+﻿<Page x:Class="AplicationForTesting.Pages.RatingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AplicationForTesting.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RatingPage">
+
+    <Page.Resources>
+        <BitmapImage x:Key="defaultImage" UriSource="../Images/logo.png"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="600*"/>
+            <RowDefinition Height="150*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" >
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Name="tbMainTitle" HorizontalAlignment="Center" >Список студентов</TextBlock>
+                <TextBlock Name="tbNameUser" HorizontalAlignment="Right" Margin="50,0,0,0"></TextBlock>
+            </StackPanel>
+
+            <StackPanel  Orientation="Horizontal" >
+
+                <StackPanel Orientation="Vertical" Margin="20,0,0,25">
+                    <TextBlock Margin="0,0,15,10">Сортировка по баллам:</TextBlock>
+
+                    <ComboBox Name="cbSort" Width="160"  Height="30"  SelectionChanged="cbSort_Changed" HorizontalAlignment="Left" IsEnabled="True">
+                        <ComboBoxItem Content="По возрастанию"/>
+                        <ComboBoxItem Content="По убыванию"/>
+                    </ComboBox>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10,0,0,25">
+                    <TextBlock Margin="0,0,15,10">Фильтрация по оценке:</TextBlock>
+
+                    <ComboBox Name="cbResoult" Width="160"  Height="30" SelectionChanged="cbResoult_Changed">
+                        <ComboBoxItem>Все оценки</ComboBoxItem>
+                        <ComboBoxItem>Неудовлетворительно</ComboBoxItem>
+                        <ComboBoxItem>Удовлетворительно</ComboBoxItem>
+                        <ComboBoxItem>Хорошо</ComboBoxItem>
+                        <ComboBoxItem>Отлично</ComboBoxItem>
+                    </ComboBox>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="10,0,0,25">
+                    <TextBlock Margin="0,0,15,10">Поиск по фамилии</TextBlock>
+                    <TextBox Name="tbFindStudent" TextChanged="tbFindStudent_TextChanged"  Height="30" Width="160"></TextBox>
+                </StackPanel>
+
+                <StackPanel Margin="40,0,0,0" Orientation="Horizontal">
+                    <TextBlock Name ="tbSecond" Margin="20,0,0,0" ></TextBlock>
+                    <TextBlock Margin="20,0,20,0">из</TextBlock>
+                    <TextBlock Name ="tbFirst"></TextBlock>
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+
+        <ListView Name="listStudents" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Margin="0,30,0,0" Height="350">
+            
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="5" CornerRadius="5" BorderThickness="1" BorderBrush="Black">
+                        <Grid Name="gridMain" Width="275" Height="90" Background="{Binding ResoultColor}">
+
+                            <StackPanel Margin="30,0,0,0" Orientation="Horizontal">
+
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Студент: "/>
+                                        <TextBlock Name="tbSurnameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserSurname}"/>
+                                        <TextBlock Name="tbNameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserName}"/>
+                                        <TextBlock Name="tbPatronymicStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserPatronymic}"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Vertical">
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Количество баллов: "/>
+                                            <TextBlock Text="{Binding Scores}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                        
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Оценка: "/>
+                                            <TextBlock Text="{Binding Result}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </StackPanel>
+                                
+                            </StackPanel>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Orientation="Horizontal" Margin="20" HorizontalAlignment="Left" Grid.Row="2">
+            <Button Name="btnDiagram" Width="150" Height="30" Click="btnDiagram_Click">Диаграмма</Button>
+            <Button Name="btnExit" Width="150" Height="30" Click="btnExit_Click">Выход</Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -11,18 +11,13 @@ namespace AplicationForTesting
 {
     using System;
     using System.Collections.Generic;
-    using System.Windows.Media;
-
-    public partial class StudentsResulst
-    {
-        public int StudentResultsId { get; set; }
-        public int UserId { get; set; }
-        public Nullable<int> Scores { get; set; }
-        public Nullable<int> Result { get; set; }
-        public Nullable<System.TimeSpan> Time { get; set; }
     
-        public virtual Users Users { get; set; }
-
-       
+    public partial class sysdiagrams
+    {
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -51,7 +51,7 @@ namespace AplicationForTesting.Pages
                     UserLogin = tbLogin.Text,
                     UserPassword = tbPassword.Text,
 
-                    RoleID = 1
+                    RoleId = 1
                 };
                 BaseClass.EM.Users.Add(usersTable);
                 BaseClass.EM.SaveChanges();
