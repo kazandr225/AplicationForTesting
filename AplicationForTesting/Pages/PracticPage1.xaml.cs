@@ -21,17 +21,10 @@ namespace AplicationForTesting.Pages
     /// </summary>
     public partial class PracticPage1 : Page
     {
-        public int idUs;
         public int res1;
         public PracticPage1()
         {
             InitializeComponent();
-        }
-
-        public PracticPage1(Users users) // конструктор для студента
-        {
-            InitializeComponent();
-            idUs = users.UserId;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)

@@ -11,11 +11,10 @@
     <Grid>
         <StackPanel Orientation="Vertical" Width="255" Height="220">
 
-            <TextBlock Name="tblScore" Loaded="tblScore_Loaded" Uid="{Binding TotalScore}"></TextBlock>
-            <TextBlock Name="tblScoreCount" Loaded="tblScoreCount_Loaded" Uid="{Binding TotalScoreLoaded}"></TextBlock>
-            <TextBox Name="tbScore" Width="255" Height="25"></TextBox>
-            <TextBox Name="tbResult" Width="255" Height="25"  Margin="0,5,0,10"></TextBox>
-            <Button Name="btmSave" Click="btnSave_Click">Сохранить результат</Button>
+            <TextBlock Name="tblScore" Loaded="tblScore_Loaded" Margin="0,0,0,10" Uid="{Binding TotalScore}"></TextBlock>
+            <TextBlock Name="tblScoreCount" Loaded="tblScoreCount_Loaded" Margin="0,0,0,10" Uid="{Binding TotalScoreLoaded}"></TextBlock>
+            <Button Name="btnRating" Click="btnRating_Click" Height="25" Width="200" Margin="0,0,0,10">Рейтинг</Button>
+            <Button Name="btmSave" Click="btnSave_Click" Height="25" Width="200" Margin="0,0,0,0">Закончить работу</Button>
         </StackPanel>
     </Grid>
 </Page>

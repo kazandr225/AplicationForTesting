@@ -33,8 +33,6 @@ namespace AplicationForTesting.Pages
         private void btnAutorization_Click(object sender, RoutedEventArgs e)
         {
             
-            
-
             if (tbLogin.Text == "" || tbLogin.Text == " " && tbPassword.Text == "" || tbPassword.Text == " ") //проверка на нулевое значение
             {
                 MessageBox.Show("Ошибка ввода");
@@ -55,7 +53,7 @@ namespace AplicationForTesting.Pages
                     case 1: //Студент
                         MessageBox.Show("Добро пожаловать!");
                         r = 1;
-                        FrameClass.MainFrame.Navigate(new PracticPage1(users));
+                        FrameClass.MainFrame.Navigate(new InfoPage());
                         break;
                     case 2: //Преподаватель
                         MessageBox.Show("Добро пожаловать!");

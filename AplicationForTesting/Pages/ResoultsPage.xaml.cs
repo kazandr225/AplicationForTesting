@@ -34,14 +34,46 @@ namespace AplicationForTesting.Pages
         }
 
         /// <summary>
-        /// Метод для записи результатов тестирования в базу данных
+        /// Завершение работы программы и сохранение результатов в БД
         /// </summary>
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
 
             try
             {
+                var result = MessageBox.Show("Вы точно хотите завершить работу?", "Внимание!", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    //объект для записи в БД
+                    StudentsResulst studentsResulst = new StudentsResulst()
+                    {
+                        UserId = idUs,
+                        Scores = Score,
+                        Result = Results
+                    };
 
+                    BaseClass.EM.StudentsResulst.Add(studentsResulst);
+                    BaseClass.EM.SaveChanges();
+                    MessageBox.Show("Данные усепшно добавлены");
+                } 
+            }
+            catch
+            {
+                MessageBox.Show("Возникла ошибка");
+            }
+
+        }
+
+           
+
+        /// <summary>
+        /// Сохранение результатов и переход на страницу с рейтингом студентов, прошедших тестирование
+        /// </summary>
+        private void btnRating_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+               
                 //объект для записи в БД
                 StudentsResulst studentsResulst = new StudentsResulst()
                 {
@@ -50,20 +82,16 @@ namespace AplicationForTesting.Pages
                     Result = Results
                 };
 
-                Role role = new Role();
-                { 
-                    
-                }
-
                 BaseClass.EM.StudentsResulst.Add(studentsResulst);
                 BaseClass.EM.SaveChanges();
-                MessageBox.Show("Данные усепшно добавлены");
+                MessageBox.Show("Данные усепшно сохранены");
+
+                FrameClass.MainFrame.Navigate(new RatingPage());
             }
             catch
             {
                 MessageBox.Show("Возникла ошибка");
             }
-
         }
 
         private void tblScore_Loaded(object sender, RoutedEventArgs e)
@@ -95,5 +123,7 @@ namespace AplicationForTesting.Pages
             TextBlock tb = (TextBlock)sender;
             tb.Text = "Количество набранных баллов: " + Score;
         }
+
+        
     }
 }

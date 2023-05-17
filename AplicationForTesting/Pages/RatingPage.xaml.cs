@@ -28,6 +28,7 @@ namespace AplicationForTesting.Pages
         public RatingPage()
         {
             InitializeComponent();
+            SortingAndFiltration();
         }
 
         public RatingPage(Users user) //Конструктор для студентов и преаодователей

@@ -76,6 +76,9 @@
     <Compile Include="Pages\AutorizationPage.xaml.cs">
       <DependentUpon>AutorizationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PracticPage1.xaml.cs">
       <DependentUpon>PracticPage1.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AutorizationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
