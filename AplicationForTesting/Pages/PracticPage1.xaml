@@ -114,9 +114,9 @@
                             <TextBlock Text="(несколько правильных ответов)" Margin="10,5,0,0"></TextBlock>
                             <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb111" Content=" 1) рынок средств производства" IsChecked="False"></CheckBox>
-                            <CheckBox Name="cb112" Content=" 2) монополия" IsChecked="False" Checked="cb_Checked"></CheckBox>
-                            <CheckBox Name="cb113" Content=" 3) местный рынок" IsChecked="False" Checked="cb_Checked"></CheckBox>
-                            <CheckBox Name="cb114" Content=" 4) рынок услуг" IsChecked="False" Checked="cb_Checked"></CheckBox>
+                            <CheckBox Name="cb112" Content=" 2) монополия" IsChecked="False"></CheckBox>
+                            <CheckBox Name="cb113" Content=" 3) местный рынок" IsChecked="False"></CheckBox>
+                            <CheckBox Name="cb114" Content=" 4) рынок услуг" IsChecked="False"></CheckBox>
                             <CheckBox Name="cb115" Content=" 5) олигополистический рынок" IsChecked="False"></CheckBox>
                             <CheckBox Name="cb116" Content=" 6) фондовый рынок" IsChecked="False"></CheckBox>
                         </StackPanel>
@@ -126,10 +126,10 @@
                         <StackPanel>
                             <TextBlock Text="12.Выберите верные суждения об отличительных чертах рыночной экономики и запишите цифры, под которыми они указаны (несколько правильных ответов)" Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb121" Content=" 1) Государство осуществляет централизованное распределение ресурсов." IsChecked="False"></CheckBox>
-                            <CheckBox Name="cb122" Content=" 2) Цены на товары и услуги определяются соотношением спроса и предложения." IsChecked="False" Checked="cb_Checked"></CheckBox>
+                            <CheckBox Name="cb122" Content=" 2) Цены на товары и услуги определяются соотношением спроса и предложения." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb123" Content=" 3) Предприятиям приходится решать проблему огра¬ниченности ресурсов." IsChecked="False"></CheckBox>
-                            <CheckBox Name="cb124" Content=" 4) Производители товаров и услуг конкурируют за спрос потребителей." IsChecked="False" Checked="cb_Checked"></CheckBox>
-                            <CheckBox Name="cb125" Content=" 5) Каждый вправе свободно распоряжаться своими способностями и имуществом для предпринимательской и иной не запрещённой законом экономической деятельности." IsChecked="False" Checked="cb_Checked"></CheckBox>
+                            <CheckBox Name="cb124" Content=" 4) Производители товаров и услуг конкурируют за спрос потребителей." IsChecked="False"></CheckBox>
+                            <CheckBox Name="cb125" Content=" 5) Каждый вправе свободно распоряжаться своими способностями и имуществом для предпринимательской и иной не запрещённой законом экономической деятельности." IsChecked="False"></CheckBox>
                         </StackPanel>
                     </StackPanel>
 
@@ -148,10 +148,10 @@
                         <StackPanel>
                             <TextBlock Text="14.Выберите верные суждения об условиях возникновения рыночной экономики и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb141" Content=" 1) Регулярность обмена." IsChecked="False"></CheckBox>
-                            <CheckBox Name="cb142" Content=" 2) Переход к парламентской демократии." IsChecked="False" Checked="cb_Checked"></CheckBox>
+                            <CheckBox Name="cb142" Content=" 2) Переход к парламентской демократии." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb143" Content=" 3) Распространение научного мировоззрения." IsChecked="False"></CheckBox>
-                            <CheckBox Name="cb144" Content=" 4) Углубление об¬щественного разделения труда." IsChecked="False" Checked="cb_Checked"></CheckBox>
-                            <CheckBox Name="cb145" Content=" 5) Появление норм права." IsChecked="False" Checked="cb_Checked"></CheckBox>
+                            <CheckBox Name="cb144" Content=" 4) Углубление об¬щественного разделения труда." IsChecked="False"></CheckBox>
+                            <CheckBox Name="cb145" Content=" 5) Появление норм права." IsChecked="False"></CheckBox>
                         </StackPanel>
                     </StackPanel>
 
@@ -165,7 +165,19 @@
                             <CheckBox Name="cb155" Content=" 5) В условиях олигополии возможен контроль за ценой при тайном сговоре." IsChecked="False"></CheckBox>
                         </StackPanel>
                     </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel>
+                            <TextBlock Text="16. В стране В только три фармакологических компании, выпускающие лекарственные препараты, пользующиеся спросом у больных. Выберите из приведённого ниже списка характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
+                        <CheckBox Name="cb161" Content=" 1) Рынок товаров и услуг" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb162" Content=" 2) Фондовая биржа" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb163" Content=" 3) Монополия" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb164" Content=" 4) Национальный рынок" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb165" Content=" 5) Олигополия" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb166" Content=" 6) Моровой рынок" IsChecked="False"></CheckBox>
+                        </StackPanel>
                 </StackPanel>
+        </StackPanel>
 
             </ScrollViewer>
         </StackPanel>

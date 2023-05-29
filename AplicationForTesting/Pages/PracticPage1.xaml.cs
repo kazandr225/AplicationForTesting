@@ -68,14 +68,23 @@ namespace AplicationForTesting.Pages
             if (cb144.IsChecked == true) res1++;
             if (cb145.IsChecked == true) res1--;
 
+            if (cb151.IsChecked == true) res1--;
+            if (cb152.IsChecked == true) res1--;
+            if (cb153.IsChecked == true) res1++;
+            if (cb154.IsChecked == true) res1++;
+            if (cb155.IsChecked == true) res1++;
+
+            if (cb161.IsChecked == true) res1++;
+            if (cb162.IsChecked == true) res1--;
+            if (cb163.IsChecked == true) res1--;
+            if (cb164.IsChecked == true) res1++;
+            if (cb165.IsChecked == true) res1++;
+            if (cb166.IsChecked == true) res1--;
+
             GlobalClass.res += res1;
 
-            FrameClass.MainFrame.Navigate(new ResoultsPage());
+            FrameClass.MainFrame.Navigate(new PracticPage2());
         }
 
-        private void cb_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

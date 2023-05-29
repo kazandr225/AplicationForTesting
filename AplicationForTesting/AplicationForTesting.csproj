@@ -82,6 +82,9 @@
     <Compile Include="Pages\PracticPage1.xaml.cs">
       <DependentUpon>PracticPage1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PracticPage2.xaml.cs">
+      <DependentUpon>PracticPage2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RatingPage.xaml.cs">
       <DependentUpon>RatingPage.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PracticPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PracticPage2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
