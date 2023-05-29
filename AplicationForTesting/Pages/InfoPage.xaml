@@ -12,7 +12,7 @@
         <StackPanel Orientation="Vertical" Width="255" Height="220" >
             <TextBlock TextWrapping="Wrap"> Добро пожаловать! Данное приложение предназначено для тестирование учащихся. В практической части вам предстоит выполнить ряд тестов, по окончанию которых будет выствлена оценка. Будьте внимательны!</TextBlock>
 
-            <Button Name="btnBegin" Click="btnBegin_Click">Начать тестирование</Button>
+            <Button Name="btnBegin" Click="btnBegin_Click">Конкуренция и рыночные структуры</Button>
             <Button Name="btnBack" Click="btnBack_Click">Назад</Button>
         </StackPanel>
     </Grid>
