@@ -8,7 +8,14 @@ namespace AplicationForTesting.Classes
 {
     public static class GlobalClass
     {
-        public static int id;
-        public static int res;
+        public static int id; //роль пользователя в системе
+        public static int res; //итоговое количество баллов
+
+
+        public static int lres1;
+        public static int lres2;
+        public static int lres3;
+        //тут надо создать актуальные переменные для каждого задания и вычитать их при новом заходе на страницу, а потом просто прибавлять снова
+
     }
 }

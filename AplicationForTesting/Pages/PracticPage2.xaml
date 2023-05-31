@@ -18,7 +18,7 @@
             <ScrollViewer Name="scroll" Height="550" VerticalAlignment="Top">
                 <StackPanel Orientation="Vertical">
                     
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="1. Свободный вход на монополизированный рынок невозможен" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb1Y" Margin="10,5,0,5">Да</RadioButton>
@@ -32,7 +32,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="3. Конкурентная фирма продает по рыночной цене столько, сколько захочет" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb3Y" Margin="10,5,0,5">Да</RadioButton>
@@ -46,7 +46,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="5. При монополистической конкуренции легче основать новую фирму, чем при совершенной конкуренции" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb5Y" Margin="10,5,0,5">Да</RadioButton>
@@ -60,7 +60,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="7. На рынках олигополии продукция совершенно однородна" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb7Y" Margin="10,5,0,5">Да</RadioButton>
@@ -74,7 +74,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="9.Только в условиях совершенной конкуренции фирмы могут контролировать цены на свою продукцию" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb9Y" Margin="10,5,0,5">Да</RadioButton>
@@ -88,7 +88,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="75" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="11. Монополия может увеличить продажи, если назначит более низкие цены" Margin="10,5,0,5"></TextBlock>
                             <RadioButton Name="rb11Y" Margin="10,5,0,5">Да</RadioButton>
@@ -99,8 +99,10 @@
 
             </ScrollViewer>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Button Name="btnNext" Click="btnNext_Click" Height="30" Width="150" VerticalAlignment="Bottom"  HorizontalAlignment="Right">Следующее задание</Button>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Button Name="btnNext" Click="btnNext_Click" Height="30" Width="150" Margin="10,5,0,5" HorizontalAlignment="Left">Следующее задание</Button>
+            <Button Name="btnBack" Click="btnBack_Click" Height="30" Width="150" Margin="10,5,0,5" HorizontalAlignment="Left">Предыдущее задание</Button>
         </StackPanel>
 
     </Grid>

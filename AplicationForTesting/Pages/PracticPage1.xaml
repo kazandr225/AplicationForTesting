@@ -20,99 +20,98 @@
 
                 <StackPanel Orientation="Vertical">
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="100" Margin="0,10,0,5">
                         <StackPanel>
                             <TextBlock Text="1.Для рынка совершенной конкуренции характерно, что: " Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb1A" Margin="10,5,0,5">а) фирмы осуществляют неценовую конкуренцию;</RadioButton>
-                            <RadioButton Name="rb1B" Margin="10,5,0,5">б) фирмы не имеют собственной политики в области установления цен;</RadioButton>
-                            <RadioButton Name="rb1V" Margin="10,5,0,5">в) фирмы производят дифференцированную продукцию</RadioButton>
+                            <RadioButton Name="rb1A" Margin="10,0,0,5">а) фирмы осуществляют неценовую конкуренцию;</RadioButton>
+                            <RadioButton Name="rb1B" Margin="10,0,0,5">б) фирмы не имеют собственной политики в области установления цен;</RadioButton>
+                            <RadioButton Name="rb1V" Margin="10,0,0,5">в) фирмы производят дифференцированную продукцию</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
                             <TextBlock Text="2. Наилучший пример чистой монополии — это:" Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb2A" Margin="10,5,0,5">а) булочная рядом с вашим домом;</RadioButton>
-                            <RadioButton Name="rb2B" Margin="10,5,0,5">б) производитель пива;</RadioButton>
-                            <RadioButton Name="rb2V" Margin="10,5,0,5">в) единственная авиалиния между вашим городом и столицей страны;</RadioButton>
-                            <RadioButton Name="rb2G" Margin="10,5,0,5">г) городское предприятие водоснабжения</RadioButton>
+                            <RadioButton Name="rb2A" Margin="10,0,0,5">а) булочная рядом с вашим домом;</RadioButton>
+                            <RadioButton Name="rb2B" Margin="10,0,0,5">б) производитель пива;</RadioButton>
+                            <RadioButton Name="rb2V" Margin="10,0,0,5">в) единственная авиалиния между вашим городом и столицей страны;</RadioButton>
+                            <RadioButton Name="rb2G" Margin="10,0,0,5">г) городское предприятие водоснабжения</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
                             <TextBlock Text="3.Олигополистическая взаимозависимость означает, что: " Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb3A" Margin="10,5,0,5">а) каждая фирма производит продукцию, похожую, но не идентичную той, которую производят конкуренты;</RadioButton>
-                            <RadioButton Name="rb3B" Margin="10,5,0,5">б) все фирмы производят одну и ту же продукцию;</RadioButton>
-                            <RadioButton Name="rb3V" Margin="10,5,0,5">в) каждая фирма должна учитывать реакцию конкурентов, когда она проводит определенную ценовую политику;</RadioButton>
-                            <RadioButton Name="rb3G" Margin="10,5,0,5">г) каждая фирма несет убытки из-за неустойчивости рыночных цен</RadioButton>
+                            <RadioButton Name="rb3A" Margin="10,0,0,5">а) каждая фирма производит продукцию, похожую, но не идентичную той, которую производят конкуренты;</RadioButton>
+                            <RadioButton Name="rb3B" Margin="10,0,0,5">б) все фирмы производят одну и ту же продукцию;</RadioButton>
+                            <RadioButton Name="rb3V" Margin="10,0,0,5">в) каждая фирма должна учитывать реакцию конкурентов, когда она проводит определенную ценовую политику;</RadioButton>
+                            <RadioButton Name="rb3G" Margin="10,0,0,5">г) каждая фирма несет убытки из-за неустойчивости рыночных цен</RadioButton>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Height="125" Margin="0,10,0,0">
+                        <StackPanel>
+                            <TextBlock Text="4. Цены в рыночной экономике… " Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb4A" Margin="10,0,0,5"> а) стабильны; </RadioButton>
+                            <RadioButton Name="rb4B" Margin="10,0,0,5">б) регулируются государством; </RadioButton>
+                            <RadioButton Name="rb4V" Margin="10,0,0,5">в) зависят от спроса и предложения</RadioButton>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Text="5.Определите, в каком из нижеперечисленных вариантов типы структур рынка расположены" Margin="10,0,0,0"></TextBlock>
+                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb5A" Margin="10,0,0,5">а) совершенная конкуренция, олигополия, монополистическая конкуренция, монополия;</RadioButton>
+                            <RadioButton Name="rb5B" Margin="10,0,0,5">б) монополия, совершенная конкуренция, олигополия, монополистическая конкуренция;</RadioButton>
+                            <RadioButton Name="rb5V" Margin="10,0,0,5">в) совершенная конкуренция, монополистическая конкуренция, олигополия, монополия</RadioButton>
+                        </StackPanel>
+
+                        <StackPanel>
+                            <TextBlock Text="6. Можно утверждать, что с ростом цены на продукцию монополиста его общая прибыль: " Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb6A" Margin="10,0,0,5">а) уменьшится;</RadioButton>
+                            <RadioButton Name="rb6B" Margin="10,0,0,5">б) увеличится;</RadioButton>
+                            <RadioButton Name="rb6V" Margin="10,0,0,5">в) не изменится</RadioButton>
                         </StackPanel>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
                         <StackPanel>
-                            <TextBlock Text="4. Цены в рыночной экономике… " Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb4A" Margin="10,5,0,5"> а) стабильны; </RadioButton>
-                            <RadioButton Name="rb4B" Margin="10,5,0,5">б) регулируются государством; </RadioButton>
-                            <RadioButton Name="rb4V" Margin="10,5,0,5">в) зависят от спроса и предложения</RadioButton>
+                            <TextBlock Text="7. Определите, когда монополистическая конкуренция имеет место:" Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb7A" Margin="10,0,0,5">а) множество фирм продают однородную продукцию;</RadioButton>
+                            <RadioButton Name="rb7B" Margin="10,0,0,5">б) монополисты конкурируют друг с другом;</RadioButton>
+                            <RadioButton Name="rb7V" Margin="10,0,0,5">в) только несколько фирм производят данный товар.</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
-                            <TextBlock Text="5.Определите, в каком из нижеперечисленных вариантов типы структур рынка расположены" Margin="10,5,0,0"></TextBlock>
-                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb5A" Margin="10,5,0,5">а) совершенная конкуренция, олигополия, монополистическая конкуренция, монополия;</RadioButton>
-                            <RadioButton Name="rb5B" Margin="10,5,0,5">б) монополия, совершенная конкуренция, олигополия, монополистическая конкуренция;</RadioButton>
-                            <RadioButton Name="rb5V" Margin="10,5,0,5">в) совершенная конкуренция, монополистическая конкуренция, олигополия, монополия</RadioButton>
+                            <TextBlock Text="8. Единственная структура на рынке, не способная влиять на цены – это…" Margin="10,0,0,0"></TextBlock>
+                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb8A" Margin="10,0,0,5">а) чистая монополия;</RadioButton>
+                            <RadioButton Name="rb8B" Margin="10,0,0,5">б) олигополия;</RadioButton>
+                            <RadioButton Name="rb8V" Margin="10,0,0,5">в) монополистическая конкуренция;</RadioButton>
+                            <RadioButton Name="rb8П" Margin="10,0,0,5">г) чистая конкуренция</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
-                            <TextBlock Text="6. Можно утверждать, что с ростом цены на продукцию монополиста его общая прибыль: " Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb6A" Margin="10,5,0,5">а) уменьшится;</RadioButton>
-                            <RadioButton Name="rb6B" Margin="10,5,0,5">б) увеличится;</RadioButton>
-                            <RadioButton Name="rb6V" Margin="10,5,0,5">в) не изменится</RadioButton>
-                        </StackPanel>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
-                        <StackPanel>
-                            <TextBlock Text="7. Определите, когда монополистическая конкуренция имеет место:" Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb7A" Margin="10,5,0,5">а) множество фирм продают однородную продукцию;</RadioButton>
-                            <RadioButton Name="rb7B" Margin="10,5,0,5">б) монополисты конкурируют друг с другом;</RadioButton>
-                            <RadioButton Name="rb7V" Margin="10,5,0,5">в) только несколько фирм производят данный товар.</RadioButton>
-                        </StackPanel>
-
-                        <StackPanel>
-                            <TextBlock Text="8. Единственная структура на рынке, не способная влиять на цены – это…" Margin="10,5,0,0"></TextBlock>
-                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb8A" Margin="10,5,0,5">а) чистая монополия;</RadioButton>
-                            <RadioButton Name="rb8B" Margin="10,5,0,5">б) олигополия;</RadioButton>
-                            <RadioButton Name="rb8V" Margin="10,5,0,5">в) монополистическая конкуренция;</RadioButton>
-                            <RadioButton Name="rb8П" Margin="10,5,0,5">г) чистая конкуренция</RadioButton>
-                        </StackPanel>
-
-                        <StackPanel>
-                            <TextBlock Text="9.Найдите понятие, которое является обобщающим для всех остальных понятий" Margin="10,5,0,5"></TextBlock>
-                            <TextBlock Text="представленного ниже ряда, и запишите цифру, под которой оно указано" Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb91" Margin="10,5,0,5">1) совершенная конкуренция</RadioButton>
-                            <RadioButton Name="rb92" Margin="10,5,0,5">2) совокупный спрос</RadioButton>
-                            <RadioButton Name="rb93" Margin="10,5,0,5">3) рыночная экономика</RadioButton>
-                            <RadioButton Name="rb94" Margin="10,5,0,5">4) равновесная цена</RadioButton>
-                            <RadioButton Name="rb95" Margin="10,5,0,5">5) экономическая свобода</RadioButton>
+                            <TextBlock Text="9.Найдите понятие, которое является обобщающим для всех остальных понятий" Margin="10,0,0,5"></TextBlock>
+                            <TextBlock Text="представленного ниже ряда, и запишите цифру, под которой оно указано" Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb91" Margin="10,0,0,5">1) совершенная конкуренция</RadioButton>
+                            <RadioButton Name="rb92" Margin="10,0,0,5">2) совокупный спрос</RadioButton>
+                            <RadioButton Name="rb93" Margin="10,0,0,5">3) рыночная экономика</RadioButton>
+                            <RadioButton Name="rb94" Margin="10,0,0,5">4) равновесная цена</RadioButton>
+                            <RadioButton Name="rb95" Margin="10,0,0,5">5) экономическая свобода</RadioButton>
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="185" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="185" Margin="0,0,0,0">
                         <StackPanel>
-                            <TextBlock Text="10.Ниже приведен перечень терминов. Все они, за исключением двух, характеризуют понятие «конкуренция»." Margin="10,5,0,5"></TextBlock>
-                            <RadioButton Name="rb101" Margin="10,5,0,5"> 1)монополия</RadioButton>
-                            <RadioButton Name="rb102" Margin="10,5,0,5"> 2)монопсония</RadioButton>
-                            <RadioButton Name="rb103" Margin="10,5,0,5"> 3)кооператив</RadioButton>
-                            <RadioButton Name="rb104" Margin="10,5,0,5">4) олигополия</RadioButton>
-                            <RadioButton Name="rb105" Margin="10,5,0,5">5) совершенная конкуренция</RadioButton>
-                            <RadioButton Name="rb106" Margin="10,5,0,5">6) кооперация</RadioButton>
+                            <TextBlock Text="10.Ниже приведен перечень терминов. Все они, за исключением двух, характеризуют понятие «конкуренция»." Margin="10,0,0,5"></TextBlock>
+                            <RadioButton Name="rb101" Margin="10,0,0,5"> 1)монополия</RadioButton>
+                            <RadioButton Name="rb102" Margin="10,0,0,5"> 2)монопсония</RadioButton>
+                            <RadioButton Name="rb103" Margin="10,0,0,5"> 3)кооператив</RadioButton>
+                            <RadioButton Name="rb104" Margin="10,0,0,5">4) олигополия</RadioButton>
+                            <RadioButton Name="rb105" Margin="10,0,0,5">5) совершенная конкуренция</RadioButton>
+                            <RadioButton Name="rb106" Margin="10,0,0,0">6) кооперация</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
-                            <TextBlock Text="11. В городе N сотовую связь предоставляет только одна компания. Выберите из приведённого ниже списка характеристики данного рынка" Margin="10,5,0,0"></TextBlock>
-                            <TextBlock Text="списка характеристики данного рынка и запишите цифры, под которыми они указаны" Margin="10,5,0,0"></TextBlock>
-                            <TextBlock Text="(несколько правильных ответов)" Margin="10,5,0,0"></TextBlock>
-                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,5,0,5"></TextBlock>
+                            <TextBlock Text="11. В городе N сотовую связь предоставляет только одна компания. Выберите из приведённого ниже списка характеристики данного рынка" Margin="10,0,0,0"></TextBlock>
+                            <TextBlock Text="списка характеристики данного рынка и запишите цифры, под которыми они указаны (несколько правильных ответов)" Margin="10,0,0,0"></TextBlock>
+                            <TextBlock Text="последовательно от наиболее конкурентного к наименее конкурентному:" Margin="10,0,0,5"></TextBlock>
                             <CheckBox Name="cb111" Content=" 1) рынок средств производства" IsChecked="False"></CheckBox>
                             <CheckBox Name="cb112" Content=" 2) монополия" IsChecked="False"></CheckBox>
                             <CheckBox Name="cb113" Content=" 3) местный рынок" IsChecked="False"></CheckBox>
@@ -122,10 +121,10 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="105" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="12.Выберите верные суждения об отличительных чертах рыночной экономики и запишите цифры, под которыми они указаны (несколько правильных ответов)" Margin="10,5,0,5"></TextBlock>
-                            <CheckBox Name="cb121" Content=" 1) Государство осуществляет централизованное распределение ресурсов." IsChecked="False"></CheckBox>
+                            <CheckBox Name="cb121"  Content=" 1) Государство осуществляет централизованное распределение ресурсов." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb122" Content=" 2) Цены на товары и услуги определяются соотношением спроса и предложения." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb123" Content=" 3) Предприятиям приходится решать проблему огра¬ниченности ресурсов." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb124" Content=" 4) Производители товаров и услуг конкурируют за спрос потребителей." IsChecked="False"></CheckBox>
@@ -133,7 +132,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="100" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="13.Выберите верные суждения о характере рыночных отношений и видах рынков и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb131" Content=" 1) Конкуренция производителей способствует улучшению качества товаров." IsChecked="False"></CheckBox>
@@ -144,7 +143,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="105" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="14.Выберите верные суждения об условиях возникновения рыночной экономики и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb141" Content=" 1) Регулярность обмена." IsChecked="False"></CheckBox>
@@ -155,7 +154,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="100" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="15. Рынок спортивной одежды области Z поделён между четырьмя крупными компаниями-операторами, другие производители не представ¬лены. Выберите в приведённом ниже списке характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb151" Content=" 1) Конкуренция производителей способствует улучшению качества товаров." IsChecked="False"></CheckBox>
@@ -166,7 +165,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="150" Margin="0,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="120" Margin="10,5,0,5">
                     <StackPanel>
                             <TextBlock Text="16. В стране В только три фармакологических компании, выпускающие лекарственные препараты, пользующиеся спросом у больных. Выберите из приведённого ниже списка характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                         <CheckBox Name="cb161" Content=" 1) Рынок товаров и услуг" IsChecked="False"></CheckBox>
@@ -174,16 +173,17 @@
                         <CheckBox Name="cb163" Content=" 3) Монополия" IsChecked="False"></CheckBox>
                         <CheckBox Name="cb164" Content=" 4) Национальный рынок" IsChecked="False"></CheckBox>
                         <CheckBox Name="cb165" Content=" 5) Олигополия" IsChecked="False"></CheckBox>
-                        <CheckBox Name="cb166" Content=" 6) Моровой рынок" IsChecked="False"></CheckBox>
+                        <CheckBox Name="cb166" Content=" 6) Мировой рынок" IsChecked="False"></CheckBox>
                         </StackPanel>
                 </StackPanel>
         </StackPanel>
 
             </ScrollViewer>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Button Name="btnNext" Click="btnNext_Click" Height="30" Width="150" VerticalAlignment="Bottom"  HorizontalAlignment="Right">Следующее задание</Button>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Button Name="btnNext" Click="btnNext_Click" Height="30" Width="150" Margin="10,5,0,5" HorizontalAlignment="Left">Следующее задание</Button>
         </StackPanel>
-        
+
     </Grid>
 </Page>

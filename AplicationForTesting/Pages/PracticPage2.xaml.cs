@@ -22,7 +22,6 @@ namespace AplicationForTesting.Pages
     public partial class PracticPage2 : Page
     {
 
-        public int res2;
         public PracticPage2()
         {
             InitializeComponent();
@@ -30,22 +29,31 @@ namespace AplicationForTesting.Pages
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            //подсчитываем быллы (max = 11)
-            if (rb1Y.IsChecked == true) res2++;
-            if (rb2N.IsChecked == true) res2++;
-            if (rb3N.IsChecked == true) res2++;
-            if (rb4Y.IsChecked == true) res2++;
-            if (rb5N.IsChecked == true) res2++;
-            if (rb6N.IsChecked == true) res2++;
-            if (rb7N.IsChecked == true) res2++;
-            if (rb8Y.IsChecked == true) res2++;
-            if (rb9N.IsChecked == true) res2++;
-            if (rb10Y.IsChecked == true) res2++;
-            if (rb11Y.IsChecked == true) res2++;
+            GlobalClass.res -= GlobalClass.lres2; //вычитаем из итогового результата промежуточный
+            GlobalClass.lres2 -= GlobalClass.lres2; //обнуляем промежуточный результат
 
-            GlobalClass.res += res2;
+            //подсчет баллов (max = 11)
+            if (rb1Y.IsChecked == true) GlobalClass.lres2++;
+            if (rb2N.IsChecked == true) GlobalClass.lres2++;
+            if (rb3N.IsChecked == true) GlobalClass.lres2++;
+            if (rb4Y.IsChecked == true) GlobalClass.lres2++;
+            if (rb5N.IsChecked == true) GlobalClass.lres2++;
+            if (rb6N.IsChecked == true) GlobalClass.lres2++;
+            if (rb7N.IsChecked == true) GlobalClass.lres2++;
+            if (rb8Y.IsChecked == true) GlobalClass.lres2++;
+            if (rb9N.IsChecked == true) GlobalClass.lres2++;
+            if (rb10Y.IsChecked == true) GlobalClass.lres2++;
+            if (rb11Y.IsChecked == true) GlobalClass.lres2++;
 
-            FrameClass.MainFrame.Navigate(new ResoultsPage());
+            GlobalClass.res += GlobalClass.lres2;
+
+            FrameClass.MainFrame.Navigate(new PracticPage3());
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalClass.lres2 -= GlobalClass.lres2; //обнуляем промежуточный результат
+            FrameClass.MainFrame.Navigate(new PracticPage1());
         }
     }
 }
