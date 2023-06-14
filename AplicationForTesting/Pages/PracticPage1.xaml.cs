@@ -208,7 +208,7 @@ namespace AplicationForTesting.Pages
             Properties.Settings.Default.cb163 = (bool)cb163.IsChecked;
             Properties.Settings.Default.cb164 = (bool)cb164.IsChecked;
             Properties.Settings.Default.cb165 = (bool)cb165.IsChecked;
-            Properties.Settings.Default.cb166 = (bool)cb165.IsChecked;
+            Properties.Settings.Default.cb166 = (bool)cb166.IsChecked;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
