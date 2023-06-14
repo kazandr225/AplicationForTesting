@@ -76,7 +76,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Padding="5" CornerRadius="5" BorderThickness="1" BorderBrush="Black">
-                        <Grid Name="gridMain" Width="275" Height="90" Background="{Binding ResoultColor}">
+                        <Grid x:Name="gridMain"  Width="275" Height="90" Background="{Binding ResoultColor}">
 
                             <StackPanel Margin="30,0,0,0" Orientation="Horizontal">
 
@@ -112,8 +112,8 @@
         </ListView>
 
         <StackPanel Orientation="Horizontal" Margin="20" HorizontalAlignment="Left" Grid.Row="2">
-            <Button Name="btnDiagram" Width="150" Height="30" Click="btnDiagram_Click">Диаграмма</Button>
             <Button Name="btnExit" Width="150" Height="30" Click="btnExit_Click">Выход</Button>
+            <Button Name="btnClear" Width="150" Height="30" Click="btnClear_Click">Очистить результаты</Button>
         </StackPanel>
     </Grid>
 </Page>

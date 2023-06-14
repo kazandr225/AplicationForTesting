@@ -52,20 +52,19 @@ namespace AplicationForTesting.Pages
                 {
                     case 1: //Студент
                         MessageBox.Show("Добро пожаловать!");
-                        r = 1;
+                        GlobalClass.id = 1;
                         FrameClass.MainFrame.Navigate(new InfoPage());
                         break;
                     case 2: //Преподаватель
                         MessageBox.Show("Добро пожаловать!");
-                        r = 2;
+                        GlobalClass.id = 2;
                         FrameClass.MainFrame.Navigate(new RatingPage(users));
                         break;
                 }
 
-                GlobalClass.id = r;
             }
         }
-
+        
         private void btnRegistration_Click(object sender, RoutedEventArgs e)
         {
             FrameClass.MainFrame.Navigate(new RegistrationPage());

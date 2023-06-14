@@ -101,7 +101,6 @@ namespace AplicationForTesting.Pages
 
             if (!string.IsNullOrWhiteSpace(tbFindStudent.Text)) //поиск студента
             {
-                //studentsResulsts = us.Where(x => x.UserSurname.ToLower().Contains(tbFindStudent.Text.ToLower())).ToList();
                 studentsResulsts = studentsResulsts.Where(x => x.Users.UserSurname.ToLower().Contains(tbFindStudent.Text.ToLower())).ToList();
             }
 
@@ -112,7 +111,9 @@ namespace AplicationForTesting.Pages
                 MessageBox.Show("Нет данных");
             }
         }
-
+        //User3
+        //Asdf123!!
+        //studentsResulsts = us.Where(x => x.UserSurname.ToLower().Contains(tbFindStudent.Text.ToLower())).ToList();
         private void cbSort_Changed(object sender, SelectionChangedEventArgs e)
         {
             SortingAndFiltration();
@@ -127,18 +128,49 @@ namespace AplicationForTesting.Pages
             SortingAndFiltration();
         }
 
-        private void btnDiagram_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             FrameClass.MainFrame.Navigate(new AutorizationPage());
         }
 
-        
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            //var resaultsRemoving = 
 
-        //не забыть про частичные свойства, они будут помечать студектов по оценке определенным цветом, потом будет формироваться диаграммы по оценкам и такому цвету?
+            //listStudents.ItemsSource
+                
+
+            //try
+            //{
+            //    BaseClass.EM.StudentsResulst.
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Что-то пошло не так");
+            //}
+        }
+
+
+        // try
+        //    {
+               
+        //        //объект для записи в БД
+        //        StudentsResulst studentsResulst = new StudentsResulst()
+        //        {
+        //            UserId = idUs,
+        //            Scores = Score,
+        //            Result = Results
+        //        };
+
+        //BaseClass.EM.StudentsResulst.Add(studentsResulst);
+        //        BaseClass.EM.SaveChanges();
+        //        MessageBox.Show("Данные усепшно сохранены");
+
+        //        FrameClass.MainFrame.Navigate(new RatingPage());
+        //    }
+        //    catch
+        //    {
+        //        MessageBox.Show("Возникла ошибка");
+        //    }
     }
 }
