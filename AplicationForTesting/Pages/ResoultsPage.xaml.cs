@@ -53,7 +53,7 @@ namespace AplicationForTesting.Pages
 
                     BaseClass.EM.StudentsResulst.Add(studentsResulst);
                     BaseClass.EM.SaveChanges();
-                    MessageBox.Show("Данные усепшно сохранены");
+                    MessageBox.Show("Данные успешно сохранены");
 
                     FrameClass.MainFrame.Navigate(new RatingPage());
                 }
@@ -78,7 +78,7 @@ namespace AplicationForTesting.Pages
 
                     BaseClass.EM.StudentsResulst.Add(studentsResulst);
                     BaseClass.EM.SaveChanges();
-                    MessageBox.Show("Данные усепшно сохранены");
+                    MessageBox.Show("Данные успешно сохранены");
 
                     FrameClass.MainFrame.Navigate(new RatingPage());
                 }
