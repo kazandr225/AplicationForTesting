@@ -83,7 +83,7 @@
                                 <StackPanel Orientation="Vertical">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Студент: "/>
-                                        <TextBlock Name="tbSurnameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserSurname}"/>
+                                        <TextBlock x:Name="tbSurnameStudent2" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserSurname}"/>
                                         <TextBlock Name="tbNameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserName}"/>
                                         <TextBlock Name="tbPatronymicStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserPatronymic}"/>
                                     </StackPanel>

@@ -83,7 +83,7 @@
                             <RadioButton Name="rb8A" Margin="10,0,0,5">а) чистая монополия;</RadioButton>
                             <RadioButton Name="rb8B" Margin="10,0,0,5">б) олигополия;</RadioButton>
                             <RadioButton Name="rb8V" Margin="10,0,0,5">в) монополистическая конкуренция;</RadioButton>
-                            <RadioButton Name="rb8П" Margin="10,0,0,5">г) чистая конкуренция</RadioButton>
+                            <RadioButton Name="rb8G" Margin="10,0,0,5">г) чистая конкуренция</RadioButton>
                         </StackPanel>
 
                         <StackPanel>
@@ -132,7 +132,7 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="100" Margin="10,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="105" Margin="10,5,0,5">
                         <StackPanel>
                             <TextBlock Text="13.Выберите верные суждения о характере рыночных отношений и видах рынков и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb131" Content=" 1) Конкуренция производителей способствует улучшению качества товаров." IsChecked="False"></CheckBox>
@@ -154,9 +154,9 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Height="100" Margin="10,5,0,5">
+                    <StackPanel Orientation="Horizontal" Height="105" Margin="10,5,0,5">
                         <StackPanel>
-                            <TextBlock Text="15. Рынок спортивной одежды области Z поделён между четырьмя крупными компаниями-операторами, другие производители не представ¬лены. Выберите в приведённом ниже списке характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
+                            <TextBlock Text="15.Рынок спортивной одежды области Z поделён между четырьмя крупными компаниями-операторами, другие производители не представ¬лены. Выберите в приведённом ниже списке характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                             <CheckBox Name="cb151" Content=" 1) Конкуренция производителей способствует улучшению качества товаров." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb152" Content=" 2) Монополизация рынка ведет к снижению цен на товары и услуги." IsChecked="False"></CheckBox>
                             <CheckBox Name="cb153" Content=" 3) Рынок свободной конкуренции отличает легкий вход на него для предприятий и сложный выход." IsChecked="False"></CheckBox>
@@ -167,7 +167,7 @@
 
                     <StackPanel Orientation="Horizontal" Height="120" Margin="10,5,0,5">
                     <StackPanel>
-                            <TextBlock Text="16. В стране В только три фармакологических компании, выпускающие лекарственные препараты, пользующиеся спросом у больных. Выберите из приведённого ниже списка характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
+                            <TextBlock Text="16.В стране В только три фармакологических компании, выпускающие лекарственные препараты, пользующиеся спросом у больных. Выберите из приведённого ниже списка характеристики данного рынка и запишите цифры, под которыми они указаны." Margin="10,5,0,5"></TextBlock>
                         <CheckBox Name="cb161" Content=" 1) Рынок товаров и услуг" IsChecked="False"></CheckBox>
                         <CheckBox Name="cb162" Content=" 2) Фондовая биржа" IsChecked="False"></CheckBox>
                         <CheckBox Name="cb163" Content=" 3) Монополия" IsChecked="False"></CheckBox>

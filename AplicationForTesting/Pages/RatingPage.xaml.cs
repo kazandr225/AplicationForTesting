@@ -30,6 +30,9 @@ namespace AplicationForTesting.Pages
             if (GlobalClass.id == 1)
             {
                 btnClear.Visibility = Visibility.Collapsed;
+
+
+                
             }
         }
 
