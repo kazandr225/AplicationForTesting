@@ -74,49 +74,6 @@ namespace AplicationForTesting.Pages
             FrameClass.MainFrame.Navigate(new AutorizationPage());
         }
 
-        //Потом в общий метод отчистки переделать
-        private void tbSurname_MouseDown(object sender, MouseEventArgs e)
-        {
-            //if (tbSurname.Text == "Фамилия")
-            //{
-            //    tbSurname.Clear();
-            //}
-
-            tbSurname.Clear();
-        }
-
-        private void tbName_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (tbName.Text == "Имя")
-            {
-                tbName.Clear();
-            }
-        }
-
-        private void tbPatronymic_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (tbPatronymic.Text == "Отчество")
-            {
-                tbPatronymic.Clear();
-            }
-        }
-
-        private void tbLogin_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (tbLogin.Text == "Логин")
-            {
-                tbPatronymic.Clear();
-            }
-        }
-
-        private void tbPassword_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (tbPassword.Text == "Пароль")
-            {
-                tbPassword.Clear();
-            }
-        }
-
         /// <summary>
         /// Очистка полей при нажатии на них
         /// </summary>

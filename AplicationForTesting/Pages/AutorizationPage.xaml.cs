@@ -40,7 +40,7 @@ namespace AplicationForTesting.Pages
 
             Users users = BaseClass.EM.Users.FirstOrDefault(x => x.UserLogin == tbLogin.Text && x.UserPassword == tbPassword.Text);
 
-            if (users == null) // эта штука работает, если даже пустые значения ввести
+            if (users == null)
             { 
                 MessageBox.Show("Проверьте введенные данные", "Пользователь не найден!", MessageBoxButton.OK); 
             }
@@ -58,7 +58,7 @@ namespace AplicationForTesting.Pages
                     case 2: //Преподаватель
                         MessageBox.Show("Добро пожаловать!");
                         GlobalClass.id = 2;
-                        FrameClass.MainFrame.Navigate(new RatingPage(users));
+                        FrameClass.MainFrame.Navigate(new RatingPage());
                         break;
                 }
 

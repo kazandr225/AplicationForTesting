@@ -26,12 +26,6 @@ namespace AplicationForTesting.Pages
             InitializeComponent();
         }
 
-        public InfoPage(Users users) // конструктор для студента
-        {
-            InitializeComponent();
-            GlobalClass.id = users.UserId;
-        }
-
         private void btnBegin_Click(object sender, RoutedEventArgs e)
         {
             FrameClass.MainFrame.Navigate(new PracticPage1());

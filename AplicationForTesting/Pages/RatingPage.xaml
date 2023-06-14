@@ -76,7 +76,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Padding="5" CornerRadius="5" BorderThickness="1" BorderBrush="Black">
-                        <Grid x:Name="gridMain"  Width="275" Height="90" Background="{Binding ResoultColor}">
+                        <Grid x:Name="DGMain"  Width="275" Height="90" Background="{Binding ResoultColor}">
 
                             <StackPanel Margin="30,0,0,0" Orientation="Horizontal">
 

@@ -22,30 +22,16 @@ namespace AplicationForTesting.Pages
     public partial class RatingPage : Page
     {
         List<StudentsResulst> studentsResulsts;
-        List<Users> us;
-        Users users;
-
         public RatingPage()
         {
             InitializeComponent();
             SortingAndFiltration();
-        }
 
-        public RatingPage(Users user) //Конструктор для студентов и преаодователей
-        {
-            InitializeComponent();
-
-            if (user.RoleId == 1) //скрываем некоторые элементы для студентов
+            if (GlobalClass.id == 1)
             {
-
+                btnClear.Visibility = Visibility.Collapsed;
             }
-            else //преподователь
-            {
-                SortingAndFiltration();
-            }
-            users = user;
         }
-
 
         /// <summary>
         /// Метод для сортировки и фильтрации студентов
@@ -53,7 +39,6 @@ namespace AplicationForTesting.Pages
         public void SortingAndFiltration()
         {
             studentsResulsts = BaseClass.EM.StudentsResulst.ToList();
-            us = BaseClass.EM.Users.ToList();
             tbFirst.Text = studentsResulsts.Count.ToString();
 
             if (cbResoult.SelectedIndex != 0) //сортировка
@@ -111,9 +96,7 @@ namespace AplicationForTesting.Pages
                 MessageBox.Show("Нет данных");
             }
         }
-        //User3
-        //Asdf123!!
-        //studentsResulsts = us.Where(x => x.UserSurname.ToLower().Contains(tbFindStudent.Text.ToLower())).ToList();
+
         private void cbSort_Changed(object sender, SelectionChangedEventArgs e)
         {
             SortingAndFiltration();
@@ -135,42 +118,25 @@ namespace AplicationForTesting.Pages
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            //var resaultsRemoving = 
+            var resaultsRemoving = listStudents.SelectedItems.Cast<StudentsResulst>().ToList();
 
-            //listStudents.ItemsSource
-                
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {resaultsRemoving.Count()} элементов?", "Внимание!", 
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try 
+                {
+                    BaseClass.EM.StudentsResulst.RemoveRange(resaultsRemoving);
+                    BaseClass.EM.SaveChanges();
+                    MessageBox.Show("Данные удалены!");
 
-            //try
-            //{
-            //    BaseClass.EM.StudentsResulst.
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Что-то пошло не так");
-            //}
+                    FrameClass.MainFrame.Navigate(new RatingPage());
+                }
+                catch 
+                {
+                    MessageBox.Show("Что-то пошло не так!");
+                }
+            }
         }
 
-
-        // try
-        //    {
-               
-        //        //объект для записи в БД
-        //        StudentsResulst studentsResulst = new StudentsResulst()
-        //        {
-        //            UserId = idUs,
-        //            Scores = Score,
-        //            Result = Results
-        //        };
-
-        //BaseClass.EM.StudentsResulst.Add(studentsResulst);
-        //        BaseClass.EM.SaveChanges();
-        //        MessageBox.Show("Данные усепшно сохранены");
-
-        //        FrameClass.MainFrame.Navigate(new RatingPage());
-        //    }
-        //    catch
-        //    {
-        //        MessageBox.Show("Возникла ошибка");
-        //    }
     }
 }
