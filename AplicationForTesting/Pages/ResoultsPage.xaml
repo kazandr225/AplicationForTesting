@@ -13,8 +13,7 @@
 
             <TextBlock Name="tblScore" Loaded="tblScore_Loaded" Margin="0,0,0,10" Uid="{Binding TotalScore}"></TextBlock>
             <TextBlock Name="tblScoreCount" Loaded="tblScoreCount_Loaded" Margin="0,0,0,10" Uid="{Binding TotalScoreLoaded}"></TextBlock>
-            <Button Name="btnRating" Click="btnRating_Click" Height="25" Width="200" Margin="0,0,0,10">Рейтинг</Button>
-            <Button Name="btmSave" Click="btnSave_Click" Height="25" Width="200" Margin="0,0,0,0">Закончить работу</Button>
+            <Button Name="btmEnd" Click="btnEnd_Click" Height="25" Width="200" Margin="0,0,0,0">Закончить работу</Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -5,13 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Хранилище PractikaKazanskiyModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Resurce">
-          <Key>
-            <PropertyRef Name="idResurce" />
-          </Key>
-          <Property Name="idResurce" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TaskPicture" Type="nvarchar(max)" />
-        </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="RoleId" />
@@ -27,7 +20,8 @@
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="Scores" Type="int" />
           <Property Name="Result" Type="int" />
-          <Property Name="Time" Type="time" Precision="7" />
+          <Property Name="DataTest" Type="date" />
+          <Property Name="TestName" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -76,7 +70,6 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище PractikaKazanskiyModelContainer">
-          <EntitySet Name="Resurce" EntityType="Self.Resurce" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StudentsResulst" EntityType="Self.StudentsResulst" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -95,7 +88,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="PractikaKazanskiyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="EntitiesModel" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Resurce" EntityType="PractikaKazanskiyModel.Resurce" />
           <EntitySet Name="Role" EntityType="PractikaKazanskiyModel.Role" />
           <EntitySet Name="StudentsResulst" EntityType="PractikaKazanskiyModel.StudentsResulst" />
           <EntitySet Name="sysdiagrams" EntityType="PractikaKazanskiyModel.sysdiagrams" />
@@ -109,13 +101,6 @@
             <End Role="StudentsResulst" EntitySet="StudentsResulst" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Resurce">
-          <Key>
-            <PropertyRef Name="idResurce" />
-          </Key>
-          <Property Name="idResurce" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TaskPicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="RoleId" />
@@ -132,7 +117,8 @@
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="Scores" Type="Int32" />
           <Property Name="Result" Type="Int32" />
-          <Property Name="Time" Type="Time" Precision="7" />
+          <Property Name="DataTest" Type="DateTime" Precision="0" />
+          <Property Name="TestName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Users" Relationship="PractikaKazanskiyModel.FK_StudentsResulst_Users" FromRole="StudentsResulst" ToRole="Users" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -189,14 +175,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Хранилище PractikaKazanskiyModelContainer" CdmEntityContainer="EntitiesModel">
-          <EntitySetMapping Name="Resurce">
-            <EntityTypeMapping TypeName="PractikaKazanskiyModel.Resurce">
-              <MappingFragment StoreEntitySet="Resurce">
-                <ScalarProperty Name="TaskPicture" ColumnName="TaskPicture" />
-                <ScalarProperty Name="idResurce" ColumnName="idResurce" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Role">
             <EntityTypeMapping TypeName="PractikaKazanskiyModel.Role">
               <MappingFragment StoreEntitySet="Role">
@@ -208,7 +186,8 @@
           <EntitySetMapping Name="StudentsResulst">
             <EntityTypeMapping TypeName="PractikaKazanskiyModel.StudentsResulst">
               <MappingFragment StoreEntitySet="StudentsResulst">
-                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="TestName" ColumnName="TestName" />
+                <ScalarProperty Name="DataTest" ColumnName="DataTest" />
                 <ScalarProperty Name="Result" ColumnName="Result" />
                 <ScalarProperty Name="Scores" ColumnName="Scores" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />

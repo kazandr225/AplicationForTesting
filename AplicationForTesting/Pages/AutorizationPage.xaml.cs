@@ -52,12 +52,14 @@ namespace AplicationForTesting.Pages
                 {
                     case 1: //Студент
                         MessageBox.Show("Добро пожаловать!");
-                        GlobalClass.id = 1;
+                        GlobalClass.id = 1; //роль пользователя
+                        GlobalClass.idUser = users.UserId; //id пользователя
                         FrameClass.MainFrame.Navigate(new InfoPage());
                         break;
                     case 2: //Преподаватель
                         MessageBox.Show("Добро пожаловать!");
-                        GlobalClass.id = 2;
+                        GlobalClass.id = 2; //роль пользователя
+                        GlobalClass.idUser = users.UserId; //id пользователя
                         FrameClass.MainFrame.Navigate(new RatingPage());
                         break;
                 }

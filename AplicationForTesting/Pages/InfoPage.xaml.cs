@@ -28,6 +28,7 @@ namespace AplicationForTesting.Pages
 
         private void btnBegin_Click(object sender, RoutedEventArgs e)
         {
+            GlobalClass.nameTest = "Конкуренция и рыночные структуры";
             FrameClass.MainFrame.Navigate(new PracticPage1());
         }
 

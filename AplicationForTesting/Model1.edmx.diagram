@@ -5,10 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a2e145b59ddb490eb0b5088eca2b56cf" Name="Diagram1">
-        <EntityTypeShape EntityType="PractikaKazanskiyModel.Resurce" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="PractikaKazanskiyModel.Role" Width="1.5" PointX="0.75" PointY="1.5" />
-        <EntityTypeShape EntityType="PractikaKazanskiyModel.StudentsResulst" Width="1.5" PointX="5.25" PointY="1.25" />
-        <EntityTypeShape EntityType="PractikaKazanskiyModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PractikaKazanskiyModel.StudentsResulst" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="PractikaKazanskiyModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="PractikaKazanskiyModel.Users" Width="1.5" PointX="3" PointY="1" />
         <AssociationConnector Association="PractikaKazanskiyModel.FK_Users_Role" />
         <AssociationConnector Association="PractikaKazanskiyModel.FK_StudentsResulst_Users" />

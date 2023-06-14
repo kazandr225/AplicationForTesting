@@ -30,9 +30,19 @@ namespace AplicationForTesting.Pages
             if (GlobalClass.id == 1)
             {
                 btnClear.Visibility = Visibility.Collapsed;
+                tbFindStudent.Visibility = Visibility.Collapsed;
+                tbxSearchText.Visibility = Visibility.Collapsed;
+            }
+        }
 
-
-                
+        private void tbText_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (GlobalClass.id == 1)
+            {
+                TextBlock tb = (TextBlock)sender;
+                //int index = Convert.ToInt32(tb.Uid);
+                //List<StudentsResulst> sr = BaseClass.EM.StudentsResulst.Where(x => x.StudentResultsId == index).ToList();
+                tb.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -140,6 +150,5 @@ namespace AplicationForTesting.Pages
                 }
             }
         }
-
     }
 }

@@ -9,8 +9,9 @@ namespace AplicationForTesting.Classes
     public static class GlobalClass
     {
         public static int id; //роль пользователя в системе
+        public static int idUser; //Код пользователя
         public static int res; //итоговое количество баллов
-
+        public static string nameTest; //название теста
 
         public static int lres1;
         public static int lres2;

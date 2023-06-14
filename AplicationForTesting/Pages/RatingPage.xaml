@@ -52,7 +52,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="10,0,0,25">
-                    <TextBlock Margin="0,0,15,10">Поиск по фамилии</TextBlock>
+                    <TextBlock Name="tbxSearchText" Margin="0,0,15,10">Поиск по фамилии</TextBlock>
                     <TextBox Name="tbFindStudent" TextChanged="tbFindStudent_TextChanged"  Height="30" Width="160"></TextBox>
                 </StackPanel>
 
@@ -76,16 +76,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Padding="5" CornerRadius="5" BorderThickness="1" BorderBrush="Black">
-                        <Grid x:Name="DGMain"  Width="275" Height="90" Background="{Binding ResoultColor}">
+                        <Grid x:Name="DGMain"  Width="350" Height="90" Background="{Binding ResoultColor}">
 
                             <StackPanel Margin="30,0,0,0" Orientation="Horizontal">
 
-                                <StackPanel Orientation="Vertical">
+                                <StackPanel x:Name="spFio" Orientation="Vertical">
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Студент: "/>
-                                        <TextBlock x:Name="tbSurnameStudent2" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserSurname}"/>
-                                        <TextBlock Name="tbNameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserName}"/>
-                                        <TextBlock Name="tbPatronymicStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserPatronymic}"/>
+                                        <TextBlock Text="Студент: " Loaded="tbText_Loaded"/>
+                                        <TextBlock Name="tbSurnameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserSurname}" Loaded="tbText_Loaded"/>
+                                        <TextBlock Name="tbNameStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserName}" Loaded="tbText_Loaded"/>
+                                        <TextBlock Name="tbPatronymicStudent" VerticalAlignment="Top" Margin="0,0,5,5" Text="{Binding Users.UserPatronymic}" Loaded="tbText_Loaded"/>
                                     </StackPanel>
 
                                     <StackPanel Orientation="Vertical">
@@ -98,6 +98,16 @@
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock Text="Оценка: "/>
                                             <TextBlock Text="{Binding Result}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Дата теста: "/>
+                                            <TextBlock Text="{Binding DataTest, StringFormat= 'yyyy-MM-dd'}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Название теста: "/>
+                                            <TextBlock Text="{Binding TestName}" TextWrapping="Wrap"/>
                                         </StackPanel>
 
                                     </StackPanel>

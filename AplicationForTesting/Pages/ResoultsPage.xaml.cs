@@ -21,7 +21,6 @@ namespace AplicationForTesting.Pages
     /// </summary>
     public partial class ResoultsPage : Page
     {
-        public int idUs;
         public int Score;
         public int Results;
 
@@ -29,66 +28,66 @@ namespace AplicationForTesting.Pages
         {
             InitializeComponent();
 
-            Score += GlobalClass.res;
-            idUs = GlobalClass.id;
+            Score += GlobalClass.res;         
         }
 
         /// <summary>
         /// Завершение работы программы и сохранение результатов в БД
         /// </summary>
-        private void btnSave_Click(object sender, RoutedEventArgs e)
-        {
-
-            try
+        private void btnEnd_Click(object sender, RoutedEventArgs e)
+        {      
+            var result = MessageBox.Show("Вы хотели бы посмотреть рейтинг студентов?", "Внимание!", MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
             {
-                var result = MessageBox.Show("Вы точно хотите завершить работу?", "Внимание!", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
+                try
                 {
                     //объект для записи в БД
                     StudentsResulst studentsResulst = new StudentsResulst()
                     {
-                        UserId = idUs,
+                        UserId = GlobalClass.idUser,
                         Scores = Score,
-                        Result = Results
+                        Result = Results,
+                        DataTest = DateTime.Today,
+                        TestName = GlobalClass.nameTest
                     };
 
                     BaseClass.EM.StudentsResulst.Add(studentsResulst);
                     BaseClass.EM.SaveChanges();
-                    MessageBox.Show("Данные усепшно добавлены");
-                } 
-            }
-            catch
-            {
-                MessageBox.Show("Возникла ошибка");
-            }
+                    MessageBox.Show("Данные усепшно сохранены");
 
-        }  
-
-        /// <summary>
-        /// Сохранение результатов и переход на страницу с рейтингом студентов, прошедших тестирование
-        /// </summary>
-        private void btnRating_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-               
-                //объект для записи в БД
-                StudentsResulst studentsResulst = new StudentsResulst()
+                    FrameClass.MainFrame.Navigate(new RatingPage());
+                }
+                catch
                 {
-                    UserId = idUs,
-                    Scores = Score,
-                    Result = Results
-                };
-
-                BaseClass.EM.StudentsResulst.Add(studentsResulst);
-                BaseClass.EM.SaveChanges();
-                MessageBox.Show("Данные усепшно сохранены");
-
-                FrameClass.MainFrame.Navigate(new RatingPage());
+                    MessageBox.Show("Возникла ошибка");
+                }
             }
-            catch
+            else
             {
-                MessageBox.Show("Возникла ошибка");
+                try
+                {
+                    //объект для записи в БД
+                    StudentsResulst studentsResulst = new StudentsResulst()
+                    {
+                        UserId = GlobalClass.idUser,
+                        Scores = Score,
+                        Result = Results,
+                        DataTest = DateTime.Today,
+                        TestName = GlobalClass.nameTest
+                    };
+
+                    BaseClass.EM.StudentsResulst.Add(studentsResulst);
+                    BaseClass.EM.SaveChanges();
+                    MessageBox.Show("Данные усепшно сохранены");
+
+                    FrameClass.MainFrame.Navigate(new RatingPage());
+                }
+                catch
+                {
+                    MessageBox.Show("Возникла ошибка");
+                }
+
+                FrameClass.MainFrame.Navigate(new AutorizationPage());
             }
         }
 
@@ -96,19 +95,19 @@ namespace AplicationForTesting.Pages
         {
             TextBlock tb = (TextBlock)sender;
 
-            if (65 <= Score && Score <= 71) //вычисляем оценку
+            if (29 <= Score && Score <= 33) //вычисляем оценку
             {
                 Results = 5;
             }
-            else if (55 <= Score && Score <= 64)
+            else if (22 <= Score && Score <= 28)
             {
                 Results = 4;
             }
-            if (46 <= Score && Score <= 54)
+            if (15 <= Score && Score <= 21)
             {
                 Results = 3;
             }
-            else if (Score <= 45)
+            else if (Score <= 14)
             {
                 Results = 2;
             }
@@ -121,7 +120,6 @@ namespace AplicationForTesting.Pages
             TextBlock tb = (TextBlock)sender;
             tb.Text = "Количество набранных баллов: " + Score;
         }
-
-        
+  
     }
 }

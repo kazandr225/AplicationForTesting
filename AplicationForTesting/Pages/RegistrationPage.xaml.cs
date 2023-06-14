@@ -40,23 +40,25 @@ namespace AplicationForTesting.Pages
                 {
                     MessageBox.Show("Пожалуйста, придумайте другой логин", "Этот логин занят!");
                 }
-
-                //объект для записей в БД
-                Users usersTable = new Users()
+                else
                 {
-                    UserSurname = tbSurname.Text,
-                    UserName = tbName.Text,
-                    UserPatronymic = tbPatronymic.Text,
+                    //объект для записей в БД
+                    Users usersTable = new Users()
+                    {
+                        UserSurname = tbSurname.Text,
+                        UserName = tbName.Text,
+                        UserPatronymic = tbPatronymic.Text,
 
-                    UserLogin = tbLogin.Text,
-                    UserPassword = tbPassword.Text,
+                        UserLogin = tbLogin.Text,
+                        UserPassword = tbPassword.Text,
 
-                    RoleId = 1
-                };
-                BaseClass.EM.Users.Add(usersTable);
-                BaseClass.EM.SaveChanges();
-                MessageBox.Show("Вы зарегистрировались!", "Регистрация прошла успешно");
-                FrameClass.MainFrame.Navigate(new AutorizationPage());
+                        RoleId = 1
+                    };
+                    BaseClass.EM.Users.Add(usersTable);
+                    BaseClass.EM.SaveChanges();
+                    MessageBox.Show("Вы зарегистрировались!", "Регистрация прошла успешно");
+                    FrameClass.MainFrame.Navigate(new AutorizationPage());
+                }   
             }
 
             catch
